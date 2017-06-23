@@ -3,6 +3,8 @@ package pl.rozen;
 import pl.rozen.list.LinkedList;
 import pl.rozen.map.HashMap;
 import pl.rozen.tree.BSTree;
+import pl.rozen.tree.Tries;
+import sun.text.normalizer.Trie;
 
 public class Main {
 
@@ -67,6 +69,20 @@ public class Main {
         list.get(3);
         list.get(-1);
         list.get(1020);
+
+        Tries t = new Tries();
+        t.add("s");
+        t.add("ss");
+        t.add("sss");
+        t.add("ssss");
+        t.add("sssss");
+        System.out.println(t.noOfMatches("s"));
+        System.out.println(t.noOfMatches("ss"));
+        System.out.println(t.noOfMatches("sss"));
+        System.out.println(t.noOfMatches("ssss"));
+        System.out.println(t.noOfMatches("sssss"));
+        System.out.println(t.noOfMatches("ssssss"));
+
 
     }
 }
